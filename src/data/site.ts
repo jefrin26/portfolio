@@ -6,7 +6,7 @@ export const site = {
     "Final-year B.Tech IT student engineering networks that stay up — learning Cisco IOS, automating with Python, and building apps with Flutter.",
   bio: [
     "Final-year B.Tech Information Technology student with 1.4 years of internship experience across R&D and software development. My lab is my playground — Cisco Packet Tracer topologies, IOS configs, and breaking things until they work.",
-    "Currently working toward my CCNA while building a foundation in routing, switching, and network automation. When I'm not in the lab, you'll find me writing Flutter apps or chasing a red car on a track day.",
+    "Currently working toward my CCNA while building a foundation in routing, switching, and network automation. Outside of work, you'll find me building with Flutter.",
   ],
   location: "Kanyakumari, TN",
   email: "jefrin.j@outlook.com",
@@ -70,7 +70,7 @@ export const certs = [
   {
     name: "B.Tech — Information Technology",
     issuer: "Final year",
-    year: "2026",
+    year: "2027",
     status: "in-progress",
   },
 ] as const;
@@ -111,7 +111,7 @@ export const experience = [
     hop: 2,
     role: "Final Year B.Tech IT",
     company: "CCNA in progress",
-    period: "2025 — 2026",
+    period: "2023 — 2027",
     points: [
       "Deep-diving Cisco IOS, routing, and switching in Packet Tracer labs.",
       "Building this portfolio to land the first network engineering role.",
