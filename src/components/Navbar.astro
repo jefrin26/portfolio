@@ -1,0 +1,92 @@
+---
+import { nav } from "../data/site";
+
+interface Props {
+  handle: string;
+}
+
+const { handle } = Astro.props;
+---
+
+<header
+  class="fixed inset-x-0 top-0 z-50 border-b border-ink-900/10 bg-paper-50/80 backdrop-blur-md dark:border-navy-600/40 dark:bg-navy-950/70"
+>
+  <div class="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 sm:px-6">
+    <a
+      href="#home"
+      class="font-mono text-sm font-semibold whitespace-nowrap text-ink-900 transition-colors hover:text-rosso-600 dark:text-paper-50 dark:hover:text-rosso-400"
+    >
+      <span class="text-led-green">●</span>
+      {handle}@network<span class="text-rosso-500">:~$</span>
+      <span class="caret"></span>
+    </a>
+
+    <nav
+      class="ml-auto flex items-center gap-1 overflow-x-auto font-mono text-xs sm:text-sm"
+      aria-label="Main navigation"
+    >
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          class="group rounded-md px-2 py-1.5 whitespace-nowrap text-ink-900/70 transition-colors hover:bg-rosso-500/10 hover:text-rosso-600 dark:text-paper-50/70 dark:hover:bg-rosso-500/10 dark:hover:text-rosso-400"
+        >
+          <span class="mr-1 text-rosso-500/70 opacity-0 transition-opacity group-hover:opacity-100"
+            >❯</span
+          >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <button
+      id="theme-toggle"
+      type="button"
+      aria-label="Toggle dark mode"
+      class="shrink-0 rounded-md border border-ink-900/10 p-2 text-ink-900/70 transition-colors hover:border-rosso-500/50 hover:text-rosso-500 dark:border-navy-600/40 dark:text-paper-50/70 dark:hover:border-rosso-500/50"
+    >
+      <svg
+        class="hidden h-4 w-4 dark:block"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v2m0 14v2m9-9h-2M5 12H3m13.5-6.5L15 7m6 12-1.5-1.5M6 6l1.5 1.5M6 18 7.5 16.5"
+        />
+        <circle cx="12" cy="12" r="4" />
+      </svg>
+      <svg
+        class="block h-4 w-4 dark:hidden"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
+        />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("theme-toggle");
+  toggle?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>
+
+<style>
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+</style>

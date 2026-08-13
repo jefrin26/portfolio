@@ -1,0 +1,57 @@
+---
+import { site } from "../data/site";
+import SectionHeader from "./SectionHeader.astro";
+---
+
+<section id="about" class="section-anchor relative py-24">
+  <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-start">
+    <div>
+      <SectionHeader label="about" title="The engineer behind the network" />
+      {site.bio.map((paragraph) => (
+        <p class="mt-6 text-base leading-relaxed text-ink-900/70 first-of-type:mt-8 dark:text-paper-50/70">
+          {paragraph}
+        </p>
+      ))}
+      <div class="mt-8 flex flex-wrap gap-2">
+        <a
+          href="#certs"
+          class="rounded-md border border-ink-900/15 px-4 py-2 font-mono text-xs text-ink-900/70 transition-colors hover:border-rosso-500/60 hover:text-rosso-600 dark:border-navy-500/50 dark:text-paper-50/70 dark:hover:border-rosso-500/60 dark:hover:text-rosso-400"
+        >
+          show certifications
+        </a>
+        <a
+          href="#projects"
+          class="rounded-md border border-ink-900/15 px-4 py-2 font-mono text-xs text-ink-900/70 transition-colors hover:border-rosso-500/60 hover:text-rosso-600 dark:border-navy-500/50 dark:text-paper-50/70 dark:hover:border-rosso-500/60 dark:hover:text-rosso-400"
+        >
+          show projects
+        </a>
+      </div>
+    </div>
+
+    <div class="panel rounded-xl p-6 font-mono text-sm leading-7">
+      <div class="mb-4 flex items-center gap-2 border-b border-ink-900/10 pb-3 dark:border-navy-600/40">
+        <span class="h-2.5 w-2.5 rounded-full bg-rosso-500"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-led-amber"></span>
+        <span class="h-2.5 w-2.5 rounded-full bg-led-green"></span>
+        <span class="ml-2 text-xs text-ink-900/50 dark:text-paper-50/50">jefrin@network: show version</span>
+      </div>
+      <div class="space-y-1 text-ink-900/80 dark:text-paper-50/80">
+        <p><span class="text-ink-900/40 dark:text-paper-50/40">hostname</span> &nbsp; {site.handle}@network</p>
+        <p><span class="text-ink-900/40 dark:text-paper-50/40">role</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {site.role}</p>
+        <p><span class="text-ink-900/40 dark:text-paper-50/40">location</span> &nbsp; {site.location}</p>
+        <p>
+          <span class="text-ink-900/40 dark:text-paper-50/40">status</span>
+          &nbsp;&nbsp;&nbsp;
+          <span class="text-led-green">●</span> {site.availability}
+        </p>
+        <p>
+          <span class="text-ink-900/40 dark:text-paper-50/40">specializations</span>
+          <br />
+          <span class="text-rosso-600 dark:text-rosso-400">
+            cisco_ios · packet_tracer · python · flutter
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
