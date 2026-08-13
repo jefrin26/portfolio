@@ -2,23 +2,17 @@
 
 Personal portfolio site for Jefrin — Network Engineer (final-year B.Tech IT).
 
-## Deployment (GitHub Pages)
+## Deploying
 
-The live site is the plain HTML/CSS/JS version in `static/`. The GitHub Actions
-workflow (`.github/workflows/deploy.yml`) publishes it to
-`https://jefrin26.github.io/portfolio/` — no build step required.
+GitHub Pages serves the repo root directly (branch deployment, no build step):
 
-- Repo settings → Pages → Source: **GitHub Actions**
-- Push to `main` (or trigger the workflow manually) to deploy
+1. Repo settings → **Pages**
+2. Source: **Deploy from a branch** → branch `main` → folder `/ (root)`
 
-## Structure
+`.nojekyll` at the root stops Jekyll processing, so `index.html`, `css/`,
+`js/`, and `favicon.svg` are served as-is at
+`https://jefrin26.github.io/portfolio/`.
 
-| Path | What it is |
-| :--- | :--------- |
-| `static/` | **Deployed site** — `index.html`, `css/main.css`, `js/main.js` |
-| `src/` | Alternate Astro version (kept for reference, not deployed) |
+## Editing
 
-## Editing the deployed site
-
-All content lives directly in `static/index.html` — edit, commit, push,
-and the workflow redeploys automatically.
+All content lives in `index.html`. Edit → commit → push → auto-deploys.
