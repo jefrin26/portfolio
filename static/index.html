@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Final-year B.Tech IT student engineering networks that stay up — learning Cisco IOS, automating with Python, and building apps with Flutter."
+    />
+    <title>Jefrin — Network Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+      const stored = localStorage.getItem("theme");
+      if (stored === "light") document.documentElement.classList.remove("dark");
+    </script>
+  </head>
+
+  <body>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="#home" class="brand">
+          <span class="dot led-green"></span>
+          jefrin@network<span class="rosso">:~$</span><span class="caret"></span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#certs">Certs</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="icon-btn">
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v2m0 14v2m9-9h-2M5 12H3m13.5-6.5L15 7m6 12-1.5-1.5M6 6l1.5 1.5M6 18 7.5 16.5" />
+            <circle cx="12" cy="12" r="4" />
+          </svg>
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ══════════ HERO ══════════ -->
+      <section id="home" class="hero">
+        <div class="bg-grid hero-grid" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <div class="status-pills">
+              <span class="pill pill-green"><span class="dot led-green led"></span>ALL SYSTEMS OPERATIONAL</span>
+              <span class="pill pill-amber"><span class="dot led-amber led"></span>OSPF CONVERGED</span>
+            </div>
+
+            <p class="prompt mono">
+              <span class="prompt-user">jefrin@network</span><span class="muted">:</span
+              ><span class="prompt-path">~</span><span class="muted">$</span>
+              whoami<span class="caret"></span>
+            </p>
+
+            <h1 class="hero-name">Jefrin</h1>
+
+            <p class="hero-role mono">→ Network Engineer <span class="muted">· ccna in progress</span></p>
+
+            <p class="hero-tagline">
+              Final-year B.Tech IT student engineering networks that stay up — learning Cisco IOS,
+              automating with Python, and building apps with Flutter.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View Projects <span aria-hidden="true">↓</span></a>
+              <a href="#contact" class="btn btn-ghost mono">ping --contact</a>
+            </div>
+
+            <div class="hero-socials mono">
+              <a href="https://github.com/jefrin26" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg class="icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.85.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.23 10.23 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
+                </svg>
+                github
+              </a>
+              <a href="https://www.linkedin.com/in/jefrin--/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg class="icon" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z" />
+                </svg>
+                linkedin
+              </a>
+              <a href="mailto:jefrin.j@outlook.com" class="social-link">
+                <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                email
+              </a>
+              <span class="social-sep"></span>
+              <span class="availability"><span class="dot led-green led"></span>Open to network roles &amp; internships</span>
+            </div>
+          </div>
+
+          <div class="hero-topology animate-float">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" class="topo-svg" role="img" aria-label="Network topology diagram">
+              <g class="traffic-line topo-stroke" fill="none" stroke-width="2">
+                <line x1="320" y1="80" x2="180" y2="150" />
+                <line x1="320" y1="80" x2="460" y2="150" />
+                <line x1="180" y1="150" x2="320" y2="250" />
+                <line x1="460" y1="150" x2="320" y2="250" />
+                <line x1="320" y1="270" x2="320" y2="370" />
+                <line x1="320" y1="390" x2="140" y2="470" />
+                <line x1="320" y1="390" x2="500" y2="470" />
+              </g>
+              <g class="topo-stroke" fill="none" stroke-width="1.5">
+                <line x1="140" y1="490" x2="500" y2="490" stroke-dasharray="5 5" />
+              </g>
+              <g class="topo-text" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">
+                <text x="250" y="112" text-anchor="end">10GE</text>
+                <text x="390" y="112" text-anchor="start">10GE</text>
+                <text x="250" y="262" text-anchor="end">10GE</text>
+                <text x="390" y="262" text-anchor="start">10GE</text>
+                <text x="334" y="320" text-anchor="start">1GE</text>
+                <text x="236" y="432" text-anchor="end">1GE</text>
+                <text x="404" y="432" text-anchor="start">1GE</text>
+                <text x="320" y="516" text-anchor="middle">1GE · redundant link</text>
+              </g>
+              <g class="topo-cloud-fill topo-stroke" fill-opacity="0.9" stroke-width="2">
+                <circle cx="280" cy="52" r="26" />
+                <circle cx="320" cy="42" r="32" />
+                <circle cx="360" cy="52" r="26" />
+                <rect x="276" y="52" width="88" height="26" rx="13" />
+              </g>
+              <g class="topo-text" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">
+                <text x="320" y="68" text-anchor="middle">ISP</text>
+              </g>
+              <circle class="led" cx="336" cy="62" r="3" fill="#22c55e" />
+              <g class="topo-node-fill topo-stroke" stroke-width="1.5">
+                <rect x="115" y="130" width="130" height="40" rx="10" />
+                <rect x="395" y="130" width="130" height="40" rx="10" />
+                <rect x="255" y="230" width="130" height="40" rx="10" />
+                <rect x="255" y="350" width="130" height="40" rx="10" />
+                <rect x="75" y="450" width="130" height="40" rx="10" />
+                <rect x="435" y="450" width="130" height="40" rx="10" />
+              </g>
+              <g class="topo-text" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" text-anchor="middle">
+                <text x="180" y="154">EDGE-R1</text>
+                <text x="460" y="154">EDGE-R2</text>
+                <text x="320" y="254">CORE-R1</text>
+                <text x="320" y="374">FW-1</text>
+                <text x="140" y="474">DIST-SW1</text>
+                <text x="500" y="474">DIST-SW2</text>
+              </g>
+              <g font-family="JetBrains Mono, monospace" font-size="8" font-weight="600" text-anchor="middle">
+                <text class="topo-text" x="180" y="185" opacity="0.7">Gi0/0/0</text>
+                <text class="topo-text" x="460" y="185" opacity="0.7">Gi0/0/0</text>
+                <text class="topo-text" x="320" y="285" opacity="0.7">Ten0/0/1</text>
+                <text class="topo-text" x="320" y="405" opacity="0.7">Ten0/0/0</text>
+                <text class="topo-text" x="140" y="505" opacity="0.7">Gi1/0/24</text>
+                <text class="topo-text" x="500" y="505" opacity="0.7">Gi1/0/24</text>
+              </g>
+              <circle class="led" cx="233" cy="142" r="4" fill="#22c55e" />
+              <circle class="led" cx="513" cy="142" r="4" fill="#22c55e" />
+              <circle class="led" cx="373" cy="242" r="4" fill="#22c55e" />
+              <circle class="led" cx="373" cy="362" r="4" fill="#f59e0b" />
+              <circle class="led" cx="193" cy="462" r="4" fill="#22c55e" />
+              <circle class="led" cx="553" cy="462" r="4" fill="#22c55e" />
+              <g fill="#ff1e3c">
+                <circle r="4.5"><animateMotion dur="8s" repeatCount="indefinite" path="M320,80 L180,150 L320,250" /></circle>
+                <circle r="4.5"><animateMotion dur="9s" repeatCount="indefinite" path="M320,80 L460,150 L320,250" /></circle>
+                <circle r="4.5"><animateMotion dur="7s" repeatCount="indefinite" path="M320,270 L320,370 L140,470" /></circle>
+                <circle r="4.5"><animateMotion dur="10s" repeatCount="indefinite" path="M320,270 L320,370 L500,470" /></circle>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ STATS BAR ══════════ -->
+      <section class="stats">
+        <div class="container">
+          <p class="mono stats-command"><span class="rosso">❯</span> show interfaces statistics</p>
+          <dl class="stats-grid">
+            <div class="stat">
+              <dt class="mono stat-label"><span class="dot led-green"></span> internship_years:</dt>
+              <dd class="mono stat-value">1.4<span class="stat-unit">yrs</span></dd>
+            </div>
+            <div class="stat">
+              <dt class="mono stat-label"><span class="dot led-green"></span> certifications:</dt>
+              <dd class="mono stat-value">1<span class="stat-unit">cnt</span></dd>
+            </div>
+            <div class="stat">
+              <dt class="mono stat-label"><span class="dot led-green"></span> network_uptime:</dt>
+              <dd class="mono stat-value">99.9<span class="stat-unit">%</span></dd>
+            </div>
+            <div class="stat">
+              <dt class="mono stat-label"><span class="dot led-green"></span> always_on:</dt>
+              <dd class="mono stat-value">24/7<span class="stat-unit">h</span></dd>
+            </div>
+          </dl>
+          <p class="mono stats-foot">
+            99.9% uptime · B.TECH IT · FINAL YEAR · last_updated: <span id="year-stats"></span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════ ABOUT ══════════ -->
+      <section id="about" class="section reveal">
+        <div class="container about-grid">
+          <div>
+            <div class="section-head">
+              <p class="mono section-label"><span class="muted">//</span> about</p>
+              <h2 class="section-title">The engineer behind the network</h2>
+            </div>
+            <p class="section-text">
+              Final-year B.Tech Information Technology student with 1.4 years of internship
+              experience across R&amp;D and software development. My lab is my playground — Cisco
+              Packet Tracer topologies, IOS configs, and breaking things until they work.
+            </p>
+            <p class="section-text">
+              Currently working toward my CCNA while building a foundation in routing, switching,
+              and network automation. When I'm not in the lab, you'll find me writing Flutter apps
+              or chasing a red car on a track day.
+            </p>
+            <div class="about-actions mono">
+              <a href="#certs" class="chip-btn">show certifications</a>
+              <a href="#projects" class="chip-btn">show projects</a>
+            </div>
+          </div>
+
+          <div class="panel term-panel">
+            <div class="term-bar">
+              <span class="term-dot term-red"></span>
+              <span class="term-dot term-amber"></span>
+              <span class="term-dot term-green"></span>
+              <span class="term-title mono">jefrin@network: show version</span>
+            </div>
+            <div class="term-body mono">
+              <p><span class="muted">hostname</span> &nbsp; jefrin@network</p>
+              <p><span class="muted">role</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Network Engineer</p>
+              <p><span class="muted">location</span> &nbsp; Kanyakumari, TN</p>
+              <p><span class="muted">status</span> &nbsp;&nbsp;&nbsp; <span class="led-green">●</span> Open to network roles &amp; internships</p>
+              <p>
+                <span class="muted">specializations</span><br />
+                <span class="rosso">cisco_ios · packet_tracer · python · flutter</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ SKILLS ══════════ -->
+      <section id="skills" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="mono section-label"><span class="muted">//</span> skills</p>
+            <h2 class="section-title">Protocols, platforms, and tools</h2>
+          </div>
+          <p class="section-sub">The stack I work with daily — from routing protocols to automation pipelines.</p>
+
+          <div class="skills-grid">
+            <div class="panel skill-card">
+              <div class="skill-head">
+                <span class="skill-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm8 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-8 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8 9v6m0-12a3 3 0 0 0 3 3h2a3 3 0 0 1 3 3v3m0 0a3 3 0 0 1-3 3h-2a3 3 0 0 0-3 3" />
+                  </svg>
+                </span>
+                <h3 class="mono skill-name"><span class="rosso">[</span>Routing &amp; Switching<span class="rosso">]</span></h3>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">Cisco IOS</span>
+                <span class="tag">Cisco Packet Tracer</span>
+                <span class="tag">VLAN / STP</span>
+                <span class="tag">OSPF</span>
+                <span class="tag">Subnetting</span>
+              </div>
+            </div>
+
+            <div class="panel skill-card">
+              <div class="skill-head">
+                <span class="skill-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 3 3-3 3m5 0h5M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                  </svg>
+                </span>
+                <h3 class="mono skill-name"><span class="rosso">[</span>Languages &amp; Frameworks<span class="rosso">]</span></h3>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">Bash</span>
+              </div>
+            </div>
+
+            <div class="panel skill-card">
+              <div class="skill-head">
+                <span class="skill-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6.5 20a4.5 4.5 0 0 1-.7-8.95A6.5 6.5 0 0 1 18.6 9.4 4 4 0 0 1 17.5 20h-11Z" />
+                  </svg>
+                </span>
+                <h3 class="mono skill-name"><span class="rosso">[</span>Platforms &amp; Tools<span class="rosso">]</span></h3>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">Linux</span>
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">VS Code</span>
+              </div>
+            </div>
+
+            <div class="panel skill-card">
+              <div class="skill-head">
+                <span class="skill-icon">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z" />
+                  </svg>
+                </span>
+                <h3 class="mono skill-name"><span class="rosso">[</span>Currently Learning<span class="rosso">]</span></h3>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">BGP</span>
+                <span class="tag">Network Automation</span>
+                <span class="tag">Ansible</span>
+                <span class="tag">Wireshark</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ CERTS ══════════ -->
+      <section id="certs" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="mono section-label"><span class="muted">//</span> certifications</p>
+            <h2 class="section-title">Validated, not claimed</h2>
+          </div>
+          <p class="section-sub">Industry certifications backing the skills above.</p>
+
+          <div class="certs-grid">
+            <div class="panel cert-card">
+              <div class="cert-top">
+                <span class="pill pill-amber"><span class="dot led-amber led"></span>IN PROGRESS</span>
+                <span class="mono cert-year">2025</span>
+              </div>
+              <h3 class="mono cert-name">CCNA</h3>
+              <p class="cert-issuer">Cisco</p>
+            </div>
+
+            <div class="panel cert-card">
+              <div class="cert-top">
+                <span class="pill pill-amber"><span class="dot led-amber led"></span>IN PROGRESS</span>
+                <span class="mono cert-year">2026</span>
+              </div>
+              <h3 class="mono cert-name">B.Tech — Information Technology</h3>
+              <p class="cert-issuer">Final year</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ PROJECTS ══════════ -->
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="mono section-label"><span class="muted">//</span> projects</p>
+            <h2 class="section-title">Projects &amp; builds</h2>
+          </div>
+          <p class="section-sub">F1 telemetry and dev tooling — built, documented, and shipped.</p>
+
+          <div class="projects-grid">
+            <article class="panel project-card">
+              <div class="term-bar">
+                <span class="term-dot term-red"></span>
+                <span class="term-dot term-amber"></span>
+                <span class="term-dot term-green"></span>
+                <span class="term-title mono">jefrin@network:~$ python ingest.py --telemetry</span>
+              </div>
+              <div class="project-body">
+                <h3 class="mono project-name">Camber — F1 Tire Health Dashboard</h3>
+                <p class="project-summary">
+                  Real-time F1 tire health dashboard that ingests live telemetry to model tire
+                  degradation, visualize thermal windows, and predict optimal pit strategies.
+                  Built for fans, by fans.
+                </p>
+                <div class="skill-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Telemetry</span>
+                  <span class="tag">Data Modeling</span>
+                  <span class="tag">Dashboards</span>
+                </div>
+                <div class="project-links mono">
+                  <a href="#" class="link-rosso">demo ↗</a>
+                  <a href="https://github.com/jefrin26/camber-f1" target="_blank" rel="noopener noreferrer" class="link-muted">repo ↗</a>
+                </div>
+                <div class="mini-topo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" class="topo-svg" role="img" aria-label="Miniature network topology">
+                    <g class="traffic-line topo-stroke" fill="none" stroke-width="1.5">
+                      <line x1="120" y1="30" x2="45" y2="72" />
+                      <line x1="120" y1="30" x2="195" y2="72" />
+                    </g>
+                    <g class="topo-stroke" fill="none" stroke-width="1.5">
+                      <line x1="45" y1="72" x2="120" y2="112" />
+                      <line x1="195" y1="72" x2="120" y2="112" />
+                      <line x1="45" y1="72" x2="195" y2="72" stroke-dasharray="4 4" />
+                    </g>
+                    <g class="topo-node-fill topo-stroke" stroke-width="1.5">
+                      <rect x="75" y="12" width="90" height="26" rx="8" />
+                      <rect x="8" y="58" width="74" height="26" rx="8" />
+                      <rect x="158" y="58" width="74" height="26" rx="8" />
+                      <rect x="75" y="100" width="90" height="26" rx="8" />
+                    </g>
+                    <g class="topo-text" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" text-anchor="middle">
+                      <text x="120" y="29">RACE</text>
+                      <text x="45" y="75">MODEL</text>
+                      <text x="195" y="75">DASH</text>
+                      <text x="120" y="117">PITWALL</text>
+                    </g>
+                    <circle class="led" cx="157" cy="19" r="2.5" fill="#22c55e" />
+                    <circle class="led" cx="74" cy="65" r="2.5" fill="#22c55e" />
+                    <circle class="led" cx="224" cy="65" r="2.5" fill="#f59e0b" />
+                    <circle class="led" cx="157" cy="107" r="2.5" fill="#22c55e" />
+                    <g fill="#ff1e3c">
+                      <circle r="3"><animateMotion dur="6s" repeatCount="indefinite" path="M120,30 L45,72" /></circle>
+                      <circle r="3"><animateMotion dur="8s" repeatCount="indefinite" path="M195,72 L120,112" /></circle>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel project-card">
+              <div class="term-bar">
+                <span class="term-dot term-red"></span>
+                <span class="term-dot term-amber"></span>
+                <span class="term-dot term-green"></span>
+                <span class="term-title mono">jefrin@network:~$ npm run dev</span>
+              </div>
+              <div class="project-body">
+                <h3 class="mono project-name">React Quiz Engine</h3>
+                <p class="project-summary">
+                  Dynamic, JSON-driven quiz engine built with React — create and customize quizzes
+                  by editing a single data file, no coding required.
+                </p>
+                <div class="skill-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">JSON</span>
+                  <span class="tag">Templates</span>
+                </div>
+                <div class="project-links mono">
+                  <a href="#" class="link-rosso">demo ↗</a>
+                  <a href="https://github.com/jefrin26/react-quiz-app" target="_blank" rel="noopener noreferrer" class="link-muted">repo ↗</a>
+                </div>
+                <div class="mini-topo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" class="topo-svg" role="img" aria-label="Miniature network topology">
+                    <g class="traffic-line topo-stroke" fill="none" stroke-width="1.5">
+                      <line x1="120" y1="30" x2="45" y2="72" />
+                      <line x1="120" y1="30" x2="195" y2="72" />
+                    </g>
+                    <g class="topo-stroke" fill="none" stroke-width="1.5">
+                      <line x1="45" y1="72" x2="120" y2="112" />
+                      <line x1="195" y1="72" x2="120" y2="112" />
+                      <line x1="45" y1="72" x2="195" y2="72" stroke-dasharray="4 4" />
+                    </g>
+                    <g class="topo-node-fill topo-stroke" stroke-width="1.5">
+                      <rect x="75" y="12" width="90" height="26" rx="8" />
+                      <rect x="8" y="58" width="74" height="26" rx="8" />
+                      <rect x="158" y="58" width="74" height="26" rx="8" />
+                      <rect x="75" y="100" width="90" height="26" rx="8" />
+                    </g>
+                    <g class="topo-text" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" text-anchor="middle">
+                      <text x="120" y="29">JSON</text>
+                      <text x="45" y="75">REACT</text>
+                      <text x="195" y="75">UI</text>
+                      <text x="120" y="117">SCORE</text>
+                    </g>
+                    <circle class="led" cx="157" cy="19" r="2.5" fill="#22c55e" />
+                    <circle class="led" cx="74" cy="65" r="2.5" fill="#22c55e" />
+                    <circle class="led" cx="224" cy="65" r="2.5" fill="#f59e0b" />
+                    <circle class="led" cx="157" cy="107" r="2.5" fill="#22c55e" />
+                    <g fill="#ff1e3c">
+                      <circle r="3"><animateMotion dur="6s" repeatCount="indefinite" path="M120,30 L45,72" /></circle>
+                      <circle r="3"><animateMotion dur="8s" repeatCount="indefinite" path="M195,72 L120,112" /></circle>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ EXPERIENCE ══════════ -->
+      <section id="experience" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <p class="mono section-label"><span class="muted">//</span> experience</p>
+            <h2 class="section-title">Traceroute to today</h2>
+          </div>
+          <p class="mono section-command">❯ traceroute career --from intern --to network_engineer</p>
+
+          <div class="timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <span class="timeline-dot"><span class="dot led led-rosso"></span></span>
+                <span class="mono timeline-hop">hop 01</span>
+              </div>
+              <div class="panel timeline-card">
+                <div class="timeline-head">
+                  <h3 class="mono timeline-role">R&amp;D &amp; Software Development Intern</h3>
+                  <span class="mono timeline-period">2024 — 2025</span>
+                </div>
+                <p class="mono timeline-company">Flutter Frog Software Solutions</p>
+                <ul class="timeline-points">
+                  <li><span class="rosso">❯</span> Worked R&amp;D and software development in parallel at the same company — prototyping ideas and shipping features.</li>
+                  <li><span class="rosso">❯</span> Built with Flutter, Python, and JavaScript while learning real development workflows end to end.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <span class="timeline-dot"><span class="dot led led-rosso"></span></span>
+                <span class="mono timeline-hop">hop 02</span>
+              </div>
+              <div class="panel timeline-card">
+                <div class="timeline-head">
+                  <h3 class="mono timeline-role">Final Year B.Tech IT</h3>
+                  <span class="mono timeline-period">2025 — 2026</span>
+                </div>
+                <p class="mono timeline-company">CCNA in progress</p>
+                <ul class="timeline-points">
+                  <li><span class="rosso">❯</span> Deep-diving Cisco IOS, routing, and switching in Packet Tracer labs.</li>
+                  <li><span class="rosso">❯</span> Building this portfolio to land the first network engineering role.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ CONTACT ══════════ -->
+      <section id="contact" class="section reveal">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <div class="container contact-inner">
+          <div class="contact-head">
+            <p class="mono section-label"><span class="muted">//</span> contact</p>
+            <h2 class="section-title">Open a session</h2>
+          </div>
+          <p class="section-sub">
+            Hiring for a network role, or want to talk routing tables and racing? My inbox is up
+            and reachable.
+          </p>
+          <a href="mailto:jefrin.j@outlook.com" class="btn btn-primary btn-lg">
+            <span class="mono">❯</span> get in touch
+          </a>
+
+          <div class="panel links-panel">
+            <div class="term-bar">
+              <span class="term-dot term-red"></span>
+              <span class="term-dot term-amber"></span>
+              <span class="term-dot term-green"></span>
+              <span class="term-title mono">jefrin@network: show links</span>
+            </div>
+            <ul class="links-list mono">
+              <li>
+                <a href="mailto:jefrin.j@outlook.com" class="link-row">
+                  <span class="dot led led-green"></span>
+                  <span class="link-label">mail →</span>
+                  <span class="link-value">jefrin.j@outlook.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/jefrin26" target="_blank" rel="noopener noreferrer" class="link-row">
+                  <span class="dot led led-green"></span>
+                  <span class="link-label">github →</span>
+                  <span class="link-value">github.com/jefrin26</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/jefrin--/" target="_blank" rel="noopener noreferrer" class="link-row">
+                  <span class="dot led led-green"></span>
+                  <span class="link-label">linkedin →</span>
+                  <span class="link-value">linkedin.com/in/jefrin--</span>
+                </a>
+              </li>
+              <li>
+                <div class="link-row">
+                  <span class="dot led led-green"></span>
+                  <span class="link-label">location →</span>
+                  <span class="link-value">Kanyakumari, TN</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer">
+      <div class="container footer-inner mono">
+        <p><span class="dot led led-green"></span> © <span id="year"></span> Jefrin — all systems operational</p>
+        <p>
+          uptime 99.9% · B.TECH IT · FINAL YEAR · built with
+          <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="link-rosso">astro</a>
+        </p>
+        <a href="#home" class="back-top">^ traceroute --home</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
