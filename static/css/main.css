@@ -61,7 +61,13 @@ body {
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
@@ -190,6 +196,7 @@ svg {
   gap: 0.25rem;
   margin-left: auto;
   overflow-x: auto;
+  min-width: 0;
   font-family: var(--font-mono);
   font-size: 0.875rem;
   scrollbar-width: none;
@@ -292,6 +299,7 @@ svg {
   align-items: center;
   gap: 2.5rem;
   min-height: 100vh;
+  min-height: 100svh;
   padding-top: 7rem;
   padding-bottom: 4rem;
 }
@@ -974,8 +982,9 @@ svg {
 /* ═══════════════════════════════════════════
    CONTACT
    ═══════════════════════════════════════════ */
-.contact {
+#contact {
   position: relative;
+  overflow: hidden;
 }
 
 .contact-glow {
@@ -1202,10 +1211,19 @@ a.link-row:hover .link-value {
 }
 
 @media (max-width: 767px) {
+  .section {
+    padding: 4.5rem 0;
+  }
+
   .skills-grid,
   .projects-grid,
   .certs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-inner {
+    padding-top: 6.5rem;
+    padding-bottom: 3rem;
   }
 
   .hero-socials {
@@ -1216,9 +1234,22 @@ a.link-row:hover .link-value {
     display: none;
   }
 
+  .about-grid {
+    gap: 2.5rem;
+  }
+
   .timeline-item {
     grid-template-columns: 3rem 1fr;
     gap: 1rem;
+  }
+
+  .timeline-line {
+    left: 7px;
+  }
+
+  .timeline-marker {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .timeline-dot {
@@ -1226,6 +1257,24 @@ a.link-row:hover .link-value {
   }
 
   .link-label {
-    width: 4.5rem;
+    width: auto;
+    min-width: 4.5rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions .btn,
+  #contact .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-topology {
+    max-width: 420px;
+  }
+
+  .term-body {
+    padding: 1rem;
   }
 }
