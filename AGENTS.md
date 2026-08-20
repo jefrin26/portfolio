@@ -1,3 +1,9 @@
+## Read first
+
+`AI_CONTEXT.md` contains project-specific knowledge (deployed vs reference
+codebases, persona facts, design conventions, gotchas). Read it before making
+changes.
+
 ## Development
 
 When starting the dev server, use background mode:
