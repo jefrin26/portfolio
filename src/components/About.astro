@@ -1,12 +1,12 @@
 ---
-import { site } from "../data/site";
+import site from "../data/site.json";
 import SectionHeader from "./SectionHeader.astro";
 ---
 
-<section id="about" class="section-anchor relative py-24">
+<section id="about" class="section-anchor reveal relative py-24">
   <div class="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-start">
     <div>
-      <SectionHeader label="about" title="The engineer behind the network" />
+      <SectionHeader label="about" title={site.about.title} />
       {site.bio.map((paragraph) => (
         <p class="mt-6 text-base leading-relaxed text-ink-900/70 first-of-type:mt-8 dark:text-paper-50/70">
           {paragraph}
@@ -33,7 +33,7 @@ import SectionHeader from "./SectionHeader.astro";
         <span class="h-2.5 w-2.5 rounded-full bg-rosso-500"></span>
         <span class="h-2.5 w-2.5 rounded-full bg-led-amber"></span>
         <span class="h-2.5 w-2.5 rounded-full bg-led-green"></span>
-        <span class="ml-2 text-xs text-ink-900/50 dark:text-paper-50/50">jefrin@network: show version</span>
+        <span class="ml-2 text-xs text-ink-900/50 dark:text-paper-50/50">{site.about.termTitle}</span>
       </div>
       <div class="space-y-1 text-ink-900/80 dark:text-paper-50/80">
         <p><span class="text-ink-900/40 dark:text-paper-50/40">hostname</span> &nbsp; {site.handle}@network</p>
@@ -48,7 +48,7 @@ import SectionHeader from "./SectionHeader.astro";
           <span class="text-ink-900/40 dark:text-paper-50/40">specializations</span>
           <br />
           <span class="text-rosso-600 dark:text-rosso-400">
-            cisco_ios · packet_tracer · python · flutter
+            {site.specializations}
           </span>
         </p>
       </div>

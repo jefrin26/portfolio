@@ -1,0 +1,26 @@
+{
+  "title": "Protocols, platforms, and tools",
+  "sub": "The stack I work with daily — from routing protocols to automation pipelines.",
+  "items": [
+    {
+      "label": "Routing & Switching",
+      "icon": "router",
+      "items": ["Cisco IOS", "Cisco Packet Tracer", "VLAN / STP", "OSPF", "Subnetting"]
+    },
+    {
+      "label": "Languages & Frameworks",
+      "icon": "terminal",
+      "items": ["Python", "Flutter", "Dart", "Bash"]
+    },
+    {
+      "label": "Platforms & Tools",
+      "icon": "cloud",
+      "items": ["Linux", "Git / GitHub", "VS Code"]
+    },
+    {
+      "label": "Currently Learning",
+      "icon": "shield",
+      "items": ["BGP", "Network Automation", "Ansible", "Wireshark"]
+    }
+  ]
+}

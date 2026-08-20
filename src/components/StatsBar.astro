@@ -1,5 +1,7 @@
 ---
-import { stats, site } from "../data/site";
+import site from "../data/site.json";
+
+const { stats } = site;
 ---
 
 <section class="relative border-y border-ink-900/10 bg-paper-100/60 dark:border-navy-600/40 dark:bg-navy-900">
@@ -23,7 +25,7 @@ import { stats, site } from "../data/site";
       ))}
     </dl>
     <p class="mt-6 font-mono text-[11px] text-ink-900/40 dark:text-paper-50/40">
-      {site.uptime} uptime · {site.est} · last_updated: {new Date().getFullYear()}
+      {site.uptime} uptime · {site.est} · last_updated: <span data-year></span>
     </p>
   </div>
 </section>

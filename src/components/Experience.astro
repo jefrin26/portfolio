@@ -1,13 +1,13 @@
 ---
-import { experience } from "../data/site";
+import experience from "../data/experience.json";
 import SectionHeader from "./SectionHeader.astro";
 ---
 
-<section id="experience" class="section-anchor relative py-24">
+<section id="experience" class="section-anchor reveal relative py-24">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <SectionHeader label="experience" title="Traceroute to today" />
+    <SectionHeader label="experience" title={experience.title} />
     <p class="mt-4 max-w-2xl font-mono text-xs text-ink-900/50 dark:text-paper-50/50">
-      ❯ traceroute career --from intern --to network_engineer
+      {experience.command}
     </p>
 
     <div class="relative mt-12">
@@ -17,7 +17,7 @@ import SectionHeader from "./SectionHeader.astro";
       ></div>
 
       <ol class="space-y-10">
-        {experience.map((job) => (
+        {experience.items.map((job) => (
           <li class="relative grid gap-4 sm:grid-cols-[5rem_1fr] sm:gap-8">
             <div class="flex items-center gap-3 sm:flex-col sm:items-start">
               <span

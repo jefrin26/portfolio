@@ -1,5 +1,5 @@
 ---
-import { site } from "../data/site";
+import site from "../data/site.json";
 ---
 
 <footer
@@ -8,16 +8,16 @@ import { site } from "../data/site";
   <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-center font-mono text-xs text-ink-900/50 sm:px-6 dark:text-paper-50/50">
     <p class="inline-flex items-center gap-2">
       <span class="led inline-block h-1.5 w-1.5 rounded-full bg-led-green"></span>
-      © {new Date().getFullYear()} {site.name} — all systems operational
+      © <span data-year></span> {site.name} — all systems operational
     </p>
     <p>
       uptime {site.uptime} · {site.est} · built with
       <a
-        href="https://astro.build"
+        href={site.footerBuiltWith.url}
         target="_blank"
         rel="noopener noreferrer"
         class="text-rosso-600 transition-colors hover:text-rosso-400 dark:text-rosso-400"
-        >astro</a
+        >{site.footerBuiltWith.text}</a
       >
     </p>
     <a

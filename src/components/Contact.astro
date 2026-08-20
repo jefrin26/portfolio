@@ -1,5 +1,5 @@
 ---
-import { site } from "../data/site";
+import site from "../data/site.json";
 import SectionHeader from "./SectionHeader.astro";
 
 const links = [
@@ -10,7 +10,7 @@ const links = [
 ] as const;
 ---
 
-<section id="contact" class="section-anchor relative py-24">
+<section id="contact" class="section-anchor reveal relative py-24">
   <div
     class="pointer-events-none absolute bottom-0 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-rosso-500/10 blur-[140px] dark:bg-rosso-600/15"
     aria-hidden="true"
@@ -18,10 +18,9 @@ const links = [
 
   <div class="relative mx-auto max-w-4xl px-4 sm:px-6">
     <div class="text-center">
-      <SectionHeader label="contact" title="Open a session" />
+      <SectionHeader label="contact" title={site.contact.title} />
       <p class="mx-auto mt-4 max-w-xl text-ink-900/60 dark:text-paper-50/60">
-        Hiring for a network role, or want to talk routing tables and racing? My
-        inbox is up and reachable.
+        {site.contact.sub}
       </p>
       <a
         href={`mailto:${site.email}`}

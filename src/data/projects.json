@@ -1,0 +1,28 @@
+{
+  "title": "Projects & builds",
+  "sub": "F1 telemetry and dev tooling — built, documented, and shipped.",
+  "items": [
+    {
+      "name": "Camber — F1 Tire Health Dashboard",
+      "command": "python ingest.py --telemetry",
+      "summary": "Real-time F1 tire health dashboard that ingests live telemetry to model tire degradation, visualize thermal windows, and predict optimal pit strategies. Built for fans, by fans.",
+      "tags": ["Python", "Telemetry", "Data Modeling", "Dashboards"],
+      "links": {
+        "demo": "#",
+        "repo": "https://github.com/jefrin26/camber-f1"
+      },
+      "topology": ["RACE", "MODEL", "DASH", "PITWALL"]
+    },
+    {
+      "name": "React Quiz Engine",
+      "command": "npm run dev",
+      "summary": "Dynamic, JSON-driven quiz engine built with React — create and customize quizzes by editing a single data file, no coding required.",
+      "tags": ["React", "JavaScript", "JSON", "Templates"],
+      "links": {
+        "demo": "#",
+        "repo": "https://github.com/jefrin26/react-quiz-app"
+      },
+      "topology": ["JSON", "REACT", "UI", "SCORE"]
+    }
+  ]
+}

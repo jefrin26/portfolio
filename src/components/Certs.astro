@@ -1,17 +1,17 @@
 ---
-import { certs } from "../data/site";
+import certs from "../data/certs.json";
 import SectionHeader from "./SectionHeader.astro";
 ---
 
-<section id="certs" class="section-anchor relative py-24">
+<section id="certs" class="section-anchor reveal relative py-24">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <SectionHeader label="certifications" title="Validated, not claimed" />
+    <SectionHeader label="certifications" title={certs.title} />
     <p class="mt-4 max-w-2xl text-ink-900/60 dark:text-paper-50/60">
-      Industry certifications backing the skills above.
+      {certs.sub}
     </p>
 
     <div class="mt-10 grid gap-4 sm:grid-cols-2">
-      {certs.map((cert) => (
+      {certs.items.map((cert) => (
         <div
           class="panel group flex flex-col rounded-xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-rosso-500/50 hover:shadow-[0_0_40px_rgb(255,30,60/0.08)]"
         >

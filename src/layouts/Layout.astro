@@ -19,7 +19,7 @@ const { title, description } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,5 +34,52 @@ const { title, description } = Astro.props;
   <body class="relative">
     <div class="scanline hidden dark:block" aria-hidden="true"></div>
     <slot />
+    <script>
+      const year = new Date().getFullYear();
+      for (const el of document.querySelectorAll("[data-year]")) {
+        el.textContent = String(year);
+      }
+
+      const revealEls = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.12 }
+        );
+        revealEls.forEach((el) => observer.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add("visible"));
+      }
+
+      const navLinks = [...document.querySelectorAll<HTMLAnchorElement>(".nav-link")];
+      const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute("href")!))
+        .filter((el): el is Element => el !== null);
+      if ("IntersectionObserver" in window && sections.length) {
+        const navObserver = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                navLinks.forEach((link) =>
+                  link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === `#${entry.target.id}`
+                  )
+                );
+              }
+            }
+          },
+          { rootMargin: "-40% 0px -55% 0px" }
+        );
+        sections.forEach((section) => navObserver.observe(section));
+      }
+    </script>
   </body>
 </html>

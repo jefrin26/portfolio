@@ -1,0 +1,26 @@
+{
+  "title": "Traceroute to today",
+  "command": "❯ traceroute career --from intern --to network_engineer",
+  "items": [
+    {
+      "hop": 1,
+      "role": "R&D & Software Development Intern",
+      "company": "Flutter Frog Software Solutions",
+      "period": "2024 — 2025",
+      "points": [
+        "Worked R&D and software development in parallel at the same company — prototyping ideas and shipping features.",
+        "Built with Flutter, Python, and JavaScript while learning real development workflows end to end."
+      ]
+    },
+    {
+      "hop": 2,
+      "role": "Final Year B.Tech IT",
+      "company": "CCNA in progress",
+      "period": "2023 — 2027",
+      "points": [
+        "Deep-diving Cisco IOS, routing, and switching in Packet Tracer labs.",
+        "Building this portfolio to land the first network engineering role."
+      ]
+    }
+  ]
+}

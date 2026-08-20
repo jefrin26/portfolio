@@ -1,5 +1,7 @@
 ---
-import { nav } from "../data/site";
+import site from "../data/site.json";
+
+const { nav } = site;
 
 interface Props {
   handle: string;
@@ -28,9 +30,9 @@ const { handle } = Astro.props;
       {nav.map((item) => (
         <a
           href={item.href}
-          class="group rounded-md px-2 py-1.5 whitespace-nowrap text-ink-900/70 transition-colors hover:bg-rosso-500/10 hover:text-rosso-600 dark:text-paper-50/70 dark:hover:bg-rosso-500/10 dark:hover:text-rosso-400"
+          class="nav-link group rounded-md px-2 py-1.5 whitespace-nowrap text-ink-900/70 transition-colors hover:bg-rosso-500/10 hover:text-rosso-600 dark:text-paper-50/70 dark:hover:bg-rosso-500/10 dark:hover:text-rosso-400"
         >
-          <span class="mr-1 text-rosso-500/70 opacity-0 transition-opacity group-hover:opacity-100"
+          <span class="nav-arrow mr-1 text-rosso-500/70 opacity-0 transition-opacity group-hover:opacity-100"
             >❯</span
           >
           {item.label}

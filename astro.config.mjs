@@ -9,6 +9,8 @@ export default defineConfig({
   // GitHub Pages project sites live at /<repo-name>/
   // Change 'portfolio' to your repository name, or set base: '/' for a user site.
   base: '/portfolio',
+  // Generated static site lands here — copy it to the `host` branch to publish.
+  outDir: './static',
   vite: {
     plugins: [tailwindcss()],
   },

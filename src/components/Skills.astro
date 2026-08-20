@@ -1,5 +1,5 @@
 ---
-import { skills } from "../data/site";
+import skills from "../data/skills.json";
 import SectionHeader from "./SectionHeader.astro";
 
 const icons: Record<string, string> = {
@@ -14,15 +14,15 @@ const icons: Record<string, string> = {
 };
 ---
 
-<section id="skills" class="section-anchor relative py-24">
+<section id="skills" class="section-anchor reveal relative py-24">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <SectionHeader label="skills" title="Protocols, platforms, and tools" />
+    <SectionHeader label="skills" title={skills.title} />
     <p class="mt-4 max-w-2xl text-ink-900/60 dark:text-paper-50/60">
-      The stack I work with daily — from routing protocols to automation pipelines.
+      {skills.sub}
     </p>
 
     <div class="mt-10 grid gap-6 md:grid-cols-2">
-      {skills.map((domain) => (
+      {skills.items.map((domain) => (
         <div
           class="panel group rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-rosso-500/50 hover:shadow-[0_0_40px_rgb(255,30,60/0.08)]"
         >

@@ -1,18 +1,18 @@
 ---
-import { projects } from "../data/site";
+import projects from "../data/projects.json";
 import MiniTopology from "./MiniTopology.astro";
 import SectionHeader from "./SectionHeader.astro";
 ---
 
-<section id="projects" class="section-anchor relative py-24">
+<section id="projects" class="section-anchor reveal relative py-24">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <SectionHeader label="projects" title="Projects & builds" />
+    <SectionHeader label="projects" title={projects.title} />
     <p class="mt-4 max-w-2xl text-ink-900/60 dark:text-paper-50/60">
-      F1 telemetry and dev tooling — built, documented, and shipped.
+      {projects.sub}
     </p>
 
     <div class="mt-10 grid gap-6 md:grid-cols-2">
-      {projects.map((project) => (
+      {projects.items.map((project) => (
         <article
           class="panel group overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:border-rosso-500/50 hover:shadow-[0_0_50px_rgb(255,30,60/0.1)]"
         >
@@ -59,7 +59,7 @@ import SectionHeader from "./SectionHeader.astro";
             </div>
 
             <div class="mt-5 rounded-lg border border-ink-900/10 bg-white/40 p-3 dark:border-navy-600/40 dark:bg-navy-900/40">
-              <MiniTopology />
+              <MiniTopology labels={project.topology} />
             </div>
           </div>
         </article>

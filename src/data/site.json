@@ -1,0 +1,44 @@
+{
+  "name": "Jefrin",
+  "handle": "jefrin",
+  "role": "Network Engineer",
+  "tagline": "Final-year B.Tech IT student engineering networks that stay up — learning Cisco IOS, automating with Python, and building apps with Flutter.",
+  "bio": [
+    "Final-year B.Tech Information Technology student with 1.4 years of internship experience across R&D and software development. My lab is my playground — Cisco Packet Tracer topologies, IOS configs, and breaking things until they work.",
+    "Currently working toward my CCNA while building a foundation in routing, switching, and network automation. Outside of work, you'll find me building with Flutter."
+  ],
+  "specializations": "cisco_ios · packet_tracer · python · flutter",
+  "location": "Kanyakumari, TN",
+  "email": "jefrin.j@outlook.com",
+  "github": "https://github.com/jefrin26",
+  "linkedin": "https://www.linkedin.com/in/jefrin--/",
+  "availability": "Open to network roles & internships",
+  "uptime": "99.9%",
+  "est": "B.TECH IT · FINAL YEAR",
+  "footerBuiltWith": {
+    "text": "astro",
+    "url": "https://astro.build"
+  },
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Certs", "href": "#certs" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "stats": [
+    { "label": "internship_years", "value": "1.4", "unit": "yrs" },
+    { "label": "certifications", "value": "1", "unit": "cnt" },
+    { "label": "network_uptime", "value": "99.9", "unit": "%" },
+    { "label": "always_on", "value": "24/7", "unit": "h" }
+  ],
+  "about": {
+    "title": "The engineer behind the network",
+    "termTitle": "jefrin@network: show version"
+  },
+  "contact": {
+    "title": "Open a session",
+    "sub": "Hiring for a network role, or want to talk routing tables and racing? My inbox is up and reachable."
+  }
+}
