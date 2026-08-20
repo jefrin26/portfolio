@@ -92,6 +92,14 @@ Use these for any content changes; do not guess or invent:
 - `npm run build` — generates `static/` (the deployable site)
 - Node >= 22.12.0 required. If `node_modules` is missing, run `npm install`.
 
+## What the user means by these words
+
+- **"run" / "run it"** → run the dev server **locally** only
+  (`astro dev --background`). Do NOT build, do NOT push, do NOT touch `host`.
+- **"host" / "publish" / "deploy"** → only then: `npm run build`, copy fresh
+  output from `static/` to the `host` branch, push `host` (and `main` if it
+  has uncommitted work).
+
 ## Gotchas / history
 
 - A CNAME existed and was removed (repo does not use a custom domain).
