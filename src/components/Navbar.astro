@@ -2,12 +2,6 @@
 import site from "../data/site.json";
 
 const { nav } = site;
-
-interface Props {
-  handle: string;
-}
-
-const { handle } = Astro.props;
 ---
 
 <header
@@ -19,7 +13,7 @@ const { handle } = Astro.props;
       class="font-mono text-sm font-semibold whitespace-nowrap text-ink-900 transition-colors hover:text-rosso-600 dark:text-paper-50 dark:hover:text-rosso-400"
     >
       <span class="text-led-green">●</span>
-      {handle}@network<span class="text-rosso-500">:~$</span>
+      {site.handle}@network<span class="text-rosso-500">:~$</span>
       <span class="caret"></span>
     </a>
 
@@ -27,17 +21,19 @@ const { handle } = Astro.props;
       class="ml-auto flex items-center gap-1 overflow-x-auto font-mono text-xs sm:text-sm"
       aria-label="Main navigation"
     >
-      {nav.map((item) => (
-        <a
-          href={item.href}
-          class="nav-link group rounded-md px-2 py-1.5 whitespace-nowrap text-ink-900/70 transition-colors hover:bg-rosso-500/10 hover:text-rosso-600 dark:text-paper-50/70 dark:hover:bg-rosso-500/10 dark:hover:text-rosso-400"
-        >
-          <span class="nav-arrow mr-1 text-rosso-500/70 opacity-0 transition-opacity group-hover:opacity-100"
-            >❯</span
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class="nav-link group rounded-md px-2 py-1.5 whitespace-nowrap text-ink-900/70 transition-colors hover:bg-rosso-500/10 hover:text-rosso-600 dark:text-paper-50/70 dark:hover:bg-rosso-500/10 dark:hover:text-rosso-400"
           >
-          {item.label}
-        </a>
-      ))}
+            <span class="nav-arrow mr-1 text-rosso-500/70 opacity-0 transition-opacity group-hover:opacity-100">
+              ❯
+            </span>
+            {item.label}
+          </a>
+        ))
+      }
     </nav>
 
     <button
@@ -58,8 +54,8 @@ const { handle } = Astro.props;
           stroke-linecap="round"
           stroke-linejoin="round"
           d="M12 3v2m0 14v2m9-9h-2M5 12H3m13.5-6.5L15 7m6 12-1.5-1.5M6 6l1.5 1.5M6 18 7.5 16.5"
-        />
-        <circle cx="12" cy="12" r="4" />
+        ></path>
+        <circle cx="12" cy="12" r="4"></circle>
       </svg>
       <svg
         class="block h-4 w-4 dark:hidden"
@@ -72,8 +68,7 @@ const { handle } = Astro.props;
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
-        />
+          d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
       </svg>
     </button>
   </div>

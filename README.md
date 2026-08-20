@@ -8,12 +8,12 @@ build, and publish — no HTML editing needed.
 
 ## Structure
 
-| Path | What it is |
-| :--- | :--------- |
-| `src/` | **Source code (dev only)** — Astro components + JSON data |
-| `src/data/*.json` | **All site content** — edit these to update the site |
-| `static/` | **Generated output** — produced by `npm run build`, never edit by hand |
-| `host` branch | The published site (static files at repo root) served by GitHub Pages |
+| Path              | What it is                                                             |
+| :---------------- | :--------------------------------------------------------------------- |
+| `src/`            | **Source code (dev only)** — Astro components + JSON data              |
+| `src/data/*.json` | **All site content** — edit these to update the site                   |
+| `static/`         | **Generated output** — produced by `npm run build`, never edit by hand |
+| `host` branch     | The published site (static files at repo root) served by GitHub Pages  |
 
 ## Updating content (the normal flow)
 
@@ -35,14 +35,14 @@ All content is plain text in JSON. Edit the right file, rebuild, publish:
 
 ### Where to edit what
 
-| Want to change… | Edit this file |
-| :-------------- | :------------- |
-| Name, role, tagline, bio, email, socials, availability | `src/data/site.json` |
-| Nav links, stats bar, about/contact section text | `src/data/site.json` |
-| Skills and tools | `src/data/skills.json` |
-| Certifications | `src/data/certs.json` |
-| Projects | `src/data/projects.json` |
-| Experience / timeline | `src/data/experience.json` |
+| Want to change…                                        | Edit this file             |
+| :----------------------------------------------------- | :------------------------- |
+| Name, role, tagline, bio, email, socials, availability | `src/data/site.json`       |
+| Nav links, stats bar, about/contact section text       | `src/data/site.json`       |
+| Skills and tools                                       | `src/data/skills.json`     |
+| Certifications                                         | `src/data/certs.json`      |
+| Projects                                               | `src/data/projects.json`   |
+| Experience / timeline                                  | `src/data/experience.json` |
 
 Each JSON file holds its own section title and subtitle too, so headings
 change in the same place as the content.

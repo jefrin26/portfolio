@@ -2,6 +2,8 @@
   "name": "Jefrin",
   "handle": "jefrin",
   "role": "Network Engineer",
+  "ccnaStatus": "ccna in progress",
+  "badges": ["ALL SYSTEMS OPERATIONAL", "OSPF CONVERGED"],
   "tagline": "Final-year B.Tech IT student engineering networks that stay up — learning Cisco IOS, automating with Python, and building apps with Flutter.",
   "bio": [
     "Final-year B.Tech Information Technology student with 1.4 years of internship experience across R&D and software development. My lab is my playground — Cisco Packet Tracer topologies, IOS configs, and breaking things until they work.",

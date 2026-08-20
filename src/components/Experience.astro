@@ -6,7 +6,9 @@ import SectionHeader from "./SectionHeader.astro";
 <section id="experience" class="section-anchor reveal relative py-24">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <SectionHeader label="experience" title={experience.title} />
-    <p class="mt-4 max-w-2xl font-mono text-xs text-ink-900/50 dark:text-paper-50/50">
+    <p
+      class="mt-4 max-w-2xl font-mono text-xs text-ink-900/50 dark:text-paper-50/50"
+    >
       {experience.command}
     </p>
 
@@ -14,45 +16,48 @@ import SectionHeader from "./SectionHeader.astro";
       <div
         class="absolute top-2 bottom-2 left-[7px] w-px border-l border-dashed border-ink-900/20 sm:left-[23px] dark:border-navy-500/50"
         aria-hidden="true"
-      ></div>
+      >
+      </div>
 
       <ol class="space-y-10">
-        {experience.items.map((job) => (
-          <li class="relative grid gap-4 sm:grid-cols-[5rem_1fr] sm:gap-8">
-            <div class="flex items-center gap-3 sm:flex-col sm:items-start">
-              <span
-                class="relative z-10 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-rosso-500 bg-paper-50 sm:ml-4 dark:bg-navy-950"
-              >
-                <span class="led h-1.5 w-1.5 rounded-full bg-rosso-500"></span>
-              </span>
-              <span class="font-mono text-xs font-semibold text-rosso-600 dark:text-rosso-400">
-                hop {String(job.hop).padStart(2, "0")}
-              </span>
-            </div>
-
-            <div class="panel rounded-xl p-6 transition-all duration-300 hover:border-rosso-500/50">
-              <div class="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 class="font-mono text-base font-bold text-ink-950 dark:text-white">
-                  {job.role}
-                </h3>
-                <span class="font-mono text-xs text-ink-900/50 dark:text-paper-50/50">
-                  {job.period}
+        {
+          experience.items.map((job) => (
+            <li class="relative grid gap-4 sm:grid-cols-[5rem_1fr] sm:gap-8">
+              <div class="flex items-center gap-3 sm:flex-col sm:items-start">
+                <span class="relative z-10 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-rosso-500 bg-paper-50 sm:ml-4 dark:bg-navy-950">
+                  <span class="led h-1.5 w-1.5 rounded-full bg-rosso-500" />
+                </span>
+                <span class="font-mono text-xs font-semibold text-rosso-600 dark:text-rosso-400">
+                  hop {String(job.hop).padStart(2, "0")}
                 </span>
               </div>
-              <p class="mt-1 font-mono text-sm text-rosso-600 dark:text-rosso-400">
-                {job.company}
-              </p>
-              <ul class="mt-4 space-y-2">
-                {job.points.map((point) => (
-                  <li class="flex gap-2 text-sm leading-relaxed text-ink-900/70 dark:text-paper-50/70">
-                    <span class="mt-0.5 text-rosso-500" aria-hidden="true">❯</span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </li>
-        ))}
+
+              <div class="panel rounded-xl p-6 transition-all duration-300 hover:border-rosso-500/50">
+                <div class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-mono text-base font-bold text-ink-950 dark:text-white">
+                    {job.role}
+                  </h3>
+                  <span class="font-mono text-xs text-ink-900/50 dark:text-paper-50/50">
+                    {job.period}
+                  </span>
+                </div>
+                <p class="mt-1 font-mono text-sm text-rosso-600 dark:text-rosso-400">
+                  {job.company}
+                </p>
+                <ul class="mt-4 space-y-2">
+                  {job.points.map((point) => (
+                    <li class="flex gap-2 text-sm leading-relaxed text-ink-900/70 dark:text-paper-50/70">
+                      <span class="mt-0.5 text-rosso-500" aria-hidden="true">
+                        ❯
+                      </span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))
+        }
       </ol>
     </div>
   </div>

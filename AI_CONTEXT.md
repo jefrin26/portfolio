@@ -6,12 +6,12 @@ before making changes.
 
 ## Architecture (read this first)
 
-| Path | Purpose | Status |
-| :--- | :------ | :----- |
-| `src/` | Astro source — **the only place to develop** | ACTIVE |
-| `src/data/*.json` | **All site content** (text) — edit here for any content change | ACTIVE |
-| `static/` | **Generated output** of `npm run build` — NEVER hand-edit | GENERATED |
-| `host` branch | Published site (static files at repo root), served by GitHub Pages | DEPLOY |
+| Path              | Purpose                                                            | Status    |
+| :---------------- | :----------------------------------------------------------------- | :-------- |
+| `src/`            | Astro source — **the only place to develop**                       | ACTIVE    |
+| `src/data/*.json` | **All site content** (text) — edit here for any content change     | ACTIVE    |
+| `static/`         | **Generated output** of `npm run build` — NEVER hand-edit          | GENERATED |
+| `host` branch     | Published site (static files at repo root), served by GitHub Pages | DEPLOY    |
 
 - The live site at https://jefrin26.github.io/portfolio/ is served from the
   `host` branch.
@@ -37,19 +37,18 @@ before making changes.
 
 4. GitHub Pages picks it up automatically (`.nojekyll` is already present).
 
-The old `.github/workflows/deploy.yml` (Actions deploy of `./static`) is
-legacy and superseded by the `host` branch method. Don't extend it without
-asking.
+The old `.github/workflows/deploy.yml` (Actions deploy of `./static`) was
+removed — the `host` branch method is the only deployment path.
 
 ## Content lives in JSON — mapping
 
-| File | Controls |
-| :--- | :------- |
-| `src/data/site.json` | Profile (name, handle, role, tagline, bio, specializations, location, email, github, linkedin, availability, uptime, est), footer "built with" text, nav links, stats bar, about + contact section titles/text |
-| `src/data/skills.json` | Skills section: title, sub, categories with tags |
-| `src/data/certs.json` | Certs section: title, sub, items (name, issuer, year, status) |
-| `src/data/projects.json` | Projects section: title, sub, items (name, command, summary, tags, links, topology labels) |
-| `src/data/experience.json` | Experience section: title, command line, items (hop, role, company, period, points) |
+| File                       | Controls                                                                                                                                                                                                                           |
+| :------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/data/site.json`       | Profile (name, handle, role, ccnaStatus, badges, tagline, bio, specializations, location, email, github, linkedin, availability, uptime, est), footer "built with" text, nav links, stats bar, about + contact section titles/text |
+| `src/data/skills.json`     | Skills section: title, sub, categories with tags                                                                                                                                                                                   |
+| `src/data/certs.json`      | Certs section: title, sub, items (name, issuer, year, status)                                                                                                                                                                      |
+| `src/data/projects.json`   | Projects section: title, sub, items (name, command, summary, tags, links, topology labels)                                                                                                                                         |
+| `src/data/experience.json` | Experience section: title, command line, items (hop, role, company, period, points)                                                                                                                                                |
 
 Content changes are JSON-only. Component markup (`src/components/*.astro`)
 is UI — leave it alone unless the user asks for design work.
@@ -89,6 +88,8 @@ Use these for any content changes; do not guess or invent:
   `astro dev --background`
 - Manage it: `astro dev stop` / `astro dev status` / `astro dev logs`
 - `npm run check` — `astro check` type-check (must pass before finishing)
+- `npm run format` / `npm run format:check` — prettier (with
+  `prettier-plugin-astro`); run `format` before finishing
 - `npm run build` — generates `static/` (the deployable site)
 - Node >= 22.12.0 required. If `node_modules` is missing, run `npm install`.
 

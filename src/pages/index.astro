@@ -13,11 +13,8 @@ import Footer from "../components/Footer.astro";
 import site from "../data/site.json";
 ---
 
-<Layout
-  title={`${site.name} — ${site.role}`}
-  description={site.tagline}
->
-  <Navbar handle={site.handle} />
+<Layout title={`${site.name} — ${site.role}`} description={site.tagline}>
+  <Navbar />
   <main>
     <Hero />
     <StatsBar />

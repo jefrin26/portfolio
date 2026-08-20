@@ -11,35 +11,37 @@ import SectionHeader from "./SectionHeader.astro";
     </p>
 
     <div class="mt-10 grid gap-4 sm:grid-cols-2">
-      {certs.items.map((cert) => (
-        <div
-          class="panel group flex flex-col rounded-xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-rosso-500/50 hover:shadow-[0_0_40px_rgb(255,30,60/0.08)]"
-        >
-          <div class="flex items-start justify-between">
-            <span
-              class={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold ${
-                cert.status === "earned"
-                  ? "border-led-green/40 bg-led-green/10 text-led-green"
-                  : "border-led-amber/40 bg-led-amber/10 text-led-amber"
-              }`}
-            >
+      {
+        certs.items.map((cert) => (
+          <div class="panel group flex flex-col rounded-xl p-5 transition-all duration-300 hover:-translate-y-1 hover:border-rosso-500/50 hover:shadow-[0_0_40px_rgb(255,30,60/0.08)]">
+            <div class="flex items-start justify-between">
               <span
-                class={`led inline-block h-1.5 w-1.5 rounded-full ${
-                  cert.status === "earned" ? "bg-led-green" : "bg-led-amber"
+                class={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-semibold ${
+                  cert.status === "earned"
+                    ? "border-led-green/40 bg-led-green/10 text-led-green"
+                    : "border-led-amber/40 bg-led-amber/10 text-led-amber"
                 }`}
-              ></span>
-              {cert.status === "earned" ? "EARNED" : "IN PROGRESS"}
-            </span>
-            <span class="font-mono text-[10px] text-ink-900/40 dark:text-paper-50/40">
-              {cert.year}
-            </span>
+              >
+                <span
+                  class={`led inline-block h-1.5 w-1.5 rounded-full ${
+                    cert.status === "earned" ? "bg-led-green" : "bg-led-amber"
+                  }`}
+                />
+                {cert.status === "earned" ? "EARNED" : "IN PROGRESS"}
+              </span>
+              <span class="font-mono text-[10px] text-ink-900/40 dark:text-paper-50/40">
+                {cert.year}
+              </span>
+            </div>
+            <h3 class="mt-4 font-mono text-lg font-bold text-ink-950 group-hover:text-rosso-600 dark:text-white dark:group-hover:text-rosso-400">
+              {cert.name}
+            </h3>
+            <p class="mt-1 text-sm text-ink-900/60 dark:text-paper-50/60">
+              {cert.issuer}
+            </p>
           </div>
-          <h3 class="mt-4 font-mono text-lg font-bold text-ink-950 group-hover:text-rosso-600 dark:text-white dark:group-hover:text-rosso-400">
-            {cert.name}
-          </h3>
-          <p class="mt-1 text-sm text-ink-900/60 dark:text-paper-50/60">{cert.issuer}</p>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>

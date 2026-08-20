@@ -14,20 +14,20 @@ const { labels = ["CORE", "DIST-A", "DIST-B", "FW"] } = Astro.props;
   aria-label="Miniature network topology"
 >
   <g class="traffic-line topo-stroke" fill="none" stroke-width="1.5">
-    <line x1="120" y1="30" x2="45" y2="72" />
-    <line x1="120" y1="30" x2="195" y2="72" />
+    <line x1="120" y1="30" x2="45" y2="72"></line>
+    <line x1="120" y1="30" x2="195" y2="72"></line>
   </g>
   <g class="topo-stroke" fill="none" stroke-width="1.5">
-    <line x1="45" y1="72" x2="120" y2="112" />
-    <line x1="195" y1="72" x2="120" y2="112" />
-    <line x1="45" y1="72" x2="195" y2="72" stroke-dasharray="4 4" />
+    <line x1="45" y1="72" x2="120" y2="112"></line>
+    <line x1="195" y1="72" x2="120" y2="112"></line>
+    <line x1="45" y1="72" x2="195" y2="72" stroke-dasharray="4 4"></line>
   </g>
 
   <g class="topo-node-fill topo-stroke" stroke-width="1.5">
-    <rect x="75" y="12" width="90" height="26" rx="8" />
-    <rect x="8" y="58" width="74" height="26" rx="8" />
-    <rect x="158" y="58" width="74" height="26" rx="8" />
-    <rect x="75" y="100" width="90" height="26" rx="8" />
+    <rect x="75" y="12" width="90" height="26" rx="8"></rect>
+    <rect x="8" y="58" width="74" height="26" rx="8"></rect>
+    <rect x="158" y="58" width="74" height="26" rx="8"></rect>
+    <rect x="75" y="100" width="90" height="26" rx="8"></rect>
   </g>
   <g
     class="topo-text"
@@ -42,17 +42,19 @@ const { labels = ["CORE", "DIST-A", "DIST-B", "FW"] } = Astro.props;
     <text x="120" y="117">{labels[3]}</text>
   </g>
 
-  <circle class="led" cx="157" cy="19" r="2.5" fill="#22c55e" />
-  <circle class="led" cx="74" cy="65" r="2.5" fill="#22c55e" />
-  <circle class="led" cx="224" cy="65" r="2.5" fill="#f59e0b" />
-  <circle class="led" cx="157" cy="107" r="2.5" fill="#22c55e" />
+  <circle class="led" cx="157" cy="19" r="2.5" fill="#22c55e"></circle>
+  <circle class="led" cx="74" cy="65" r="2.5" fill="#22c55e"></circle>
+  <circle class="led" cx="224" cy="65" r="2.5" fill="#f59e0b"></circle>
+  <circle class="led" cx="157" cy="107" r="2.5" fill="#22c55e"></circle>
 
   <g fill="#ff1e3c">
     <circle r="3">
-      <animateMotion dur="6s" repeatCount="indefinite" path="M120,30 L45,72" />
+      <animateMotion dur="6s" repeatCount="indefinite" path="M120,30 L45,72"
+      ></animateMotion>
     </circle>
     <circle r="3">
-      <animateMotion dur="8s" repeatCount="indefinite" path="M195,72 L120,112" />
+      <animateMotion dur="8s" repeatCount="indefinite" path="M195,72 L120,112"
+      ></animateMotion>
     </circle>
   </g>
 </svg>

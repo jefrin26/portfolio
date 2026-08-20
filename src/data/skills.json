@@ -5,7 +5,13 @@
     {
       "label": "Routing & Switching",
       "icon": "router",
-      "items": ["Cisco IOS", "Cisco Packet Tracer", "VLAN / STP", "OSPF", "Subnetting"]
+      "items": [
+        "Cisco IOS",
+        "Cisco Packet Tracer",
+        "VLAN / STP",
+        "OSPF",
+        "Subnetting"
+      ]
     },
     {
       "label": "Languages & Frameworks",

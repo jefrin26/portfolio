@@ -51,14 +51,16 @@ const { title, description } = Astro.props;
               }
             }
           },
-          { threshold: 0.12 }
+          { threshold: 0.12 },
         );
         revealEls.forEach((el) => observer.observe(el));
       } else {
         revealEls.forEach((el) => el.classList.add("visible"));
       }
 
-      const navLinks = [...document.querySelectorAll<HTMLAnchorElement>(".nav-link")];
+      const navLinks = [
+        ...document.querySelectorAll<HTMLAnchorElement>(".nav-link"),
+      ];
       const sections = navLinks
         .map((link) => document.querySelector(link.getAttribute("href")!))
         .filter((el): el is Element => el !== null);
@@ -70,13 +72,13 @@ const { title, description } = Astro.props;
                 navLinks.forEach((link) =>
                   link.classList.toggle(
                     "active",
-                    link.getAttribute("href") === `#${entry.target.id}`
-                  )
+                    link.getAttribute("href") === `#${entry.target.id}`,
+                  ),
                 );
               }
             }
           },
-          { rootMargin: "-40% 0px -55% 0px" }
+          { rootMargin: "-40% 0px -55% 0px" },
         );
         sections.forEach((section) => navObserver.observe(section));
       }
