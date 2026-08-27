@@ -40,7 +40,7 @@
       ],
       "links": {
         "demo": "#",
-        "repo": "https://github.com/jefrin26/delivery-agent-tracker"
+        "repo": ""
       },
       "topology": ["MAP", "GPS", "AGENT", "ROUTE", "ZONE"]
     }
