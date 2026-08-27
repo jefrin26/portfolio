@@ -23,6 +23,26 @@
         "repo": "https://github.com/jefrin26/react-quiz-app"
       },
       "topology": ["JSON", "REACT", "UI", "SCORE"]
+    },
+    {
+      "name": "Delivery Agent Tracking App",
+      "command": "flutter run",
+      "summary": "Real-time delivery agent tracking application built with Flutter and OpenStreetMap. Features live GPS tracking, route optimization via OSRM, geofencing for delivery zones, offline map caching, and real-time status updates. Integrates Overpass API for POI lookup and custom tile servers for offline operation.",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "OpenStreetMap",
+        "Leaflet",
+        "OSRM",
+        "GeoJSON",
+        "GPS",
+        "Real-time"
+      ],
+      "links": {
+        "demo": "#",
+        "repo": "https://github.com/jefrin26/delivery-agent-tracker"
+      },
+      "topology": ["MAP", "GPS", "AGENT", "ROUTE", "ZONE"]
     }
   ]
 }

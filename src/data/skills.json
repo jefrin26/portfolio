@@ -27,6 +27,18 @@
       "label": "Currently Learning",
       "icon": "shield",
       "items": ["BGP", "Network Automation", "Ansible", "Wireshark"]
+    },
+    {
+      "label": "Geospatial & Mapping",
+      "icon": "globe",
+      "items": [
+        "OpenStreetMap",
+        "Leaflet",
+        "GeoJSON",
+        "OSRM",
+        "Overpass API",
+        "Tile Servers"
+      ]
     }
   ]
 }
